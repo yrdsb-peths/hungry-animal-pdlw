@@ -22,4 +22,13 @@ public class MyWorld extends World
         addObject(elephant, 300,200);
         addObject(apple, 300,0);
     }
+    
+    //Create a new apple at random location
+    public void createApple()
+    {
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(300);
+        addObject(apple, x, y);
+    }
 }
