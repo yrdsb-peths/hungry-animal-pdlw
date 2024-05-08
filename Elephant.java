@@ -1,30 +1,19 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class Elephant here.
+ * The Elephant actor, the main hero in this game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Micah Waddell 
+ * @version v1.0
  */
-public class Elephant  
+public class Elephant extends Actor
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class Elephant
+     * Act - do whatever the Elephant wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Elephant()
+    public void act()
     {
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        move(1);
     }
 }
