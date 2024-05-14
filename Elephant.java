@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.Timer;
+import java.util.TimerTask;
 /**
  * The Elephant actor, the main hero in this game.
  * 
@@ -12,6 +13,7 @@ public class Elephant extends Actor
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     GreenfootImage[] idleRight = new GreenfootImage[8];
     String facing = "right";
+    Timer timer = new Timer();
     public Elephant()
     {
         for(int i = 0; i<8; i++)
