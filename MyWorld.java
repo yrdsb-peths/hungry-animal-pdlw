@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public int score;
+    Label label;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,6 +21,9 @@ public class MyWorld extends World
         Elephant elephant = new Elephant();
         addObject(elephant, 300,200);
         createApple();
+        
+        label = new Label(score, 60);
+        addObject(label, 40, 40);
     }
     
     //Create a new apple at random location
@@ -29,5 +33,17 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 100);
+    }
+    
+    public void increaseScore() 
+    {
+        score++;
+        label.setValue(score);
     }
 }
