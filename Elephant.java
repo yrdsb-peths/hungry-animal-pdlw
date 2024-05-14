@@ -28,6 +28,14 @@ public class Elephant extends Actor
             idleLeft[i].scale(100,100);
         }
         setImage(idleRight[0]);
+        timer.scheduleAtFixedRate(new TimerTask() 
+        {
+            @Override
+            public void run() 
+            {
+                animateElephant();
+            }
+        },100, 100);
     }
     public void act()
     {
@@ -42,7 +50,6 @@ public class Elephant extends Actor
             facing = "right";
         }
         eat();
-        animateElephant();
     }
     int imageIndex = 0;
     public void animateElephant()
